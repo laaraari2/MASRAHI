@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState } from "react";\nimport Link from "next/link";
 import { Bell, BookOpen, CalendarDays, CheckCircle2, ChevronLeft, Clapperboard, FileText, Home, Lightbulb, Menu, Music2, Plus, Settings, Sparkles, Theater, Users, X } from "lucide-react";\nimport Link from "next/link";
 
 const nav = [
@@ -16,7 +16,7 @@ export default function HomePage(){
   return <main className="app">
     <aside className="sidebar">
       <div className="brand">🎭 مَسْرَحِي <small>MASRAHI · من النص إلى الخشبة</small></div>
-      <nav className="nav">{nav.map(([ar,frn,Icon],i)=><span key={ar}>{i===2||i===8||i===11?<span className="sep"/>:null}<a className={i===0?"active":""} href="#"><Icon size={16}/>&nbsp; {fr?frn:ar}</a></span>)}</nav>
+      <nav className="nav">{nav.map(([ar,frn,Icon],i)=><span key={ar}>{i===2||i===8||i===11?<span className="sep"/>:null}<Link className={i===0?"active":""} href={i===0?"/":i===1?"/project":i===2?"/textes":i===3?"/adaptation":i===4?"/roles":i===6?"/planning":i===7?"/rehearsals":i===8?"/decor":i===9?"/sound":i===10?"/evaluation":i===11?"/final":"#"}><Icon size={16}/>&nbsp; {fr?frn:ar}</Link></span>)}</nav>
       <div className="nav" style={{marginTop:14}}><a href="#"><Settings size={16}/>&nbsp; {fr?"Paramètres":"الإعدادات"}</a></div>
     </aside>
     <section className="main">
