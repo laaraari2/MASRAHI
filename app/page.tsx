@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from "react";\nimport Link from "next/link";
+import { useState } from "react";
+import Link from "next/link";
 import { Bell, BookOpen, CalendarDays, CheckCircle2, ChevronLeft, Clapperboard, FileText, Home, Lightbulb, Menu, Music2, Plus, Settings, Sparkles, Theater, Users, X } from "lucide-react";\nimport Link from "next/link";
 
 const nav = [
