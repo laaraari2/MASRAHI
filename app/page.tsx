@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Bell, BookOpen, CalendarDays, CheckCircle2, ChevronLeft, Clapperboard, FileText, Home, Lightbulb, Menu, Music2, Plus, Settings, Sparkles, Theater, Users, X } from "lucide-react";\nimport Link from "next/link";
+import { Bell, BookOpen, CalendarDays, CheckCircle2, ChevronLeft, Clapperboard, FileText, Home, Lightbulb, Menu, Music2, Plus, Settings, Sparkles, Theater, Users, X } from "lucide-react";
 
 const nav = [
   ["الرئيسية","Accueil",Home],["مشاريعي","Mes projets",Theater],["النصوص","Textes",BookOpen],["الإعداد والتكييف","Adaptation",FileText],["الشخصيات والأدوار","Personnages & rôles",Users],["الإخراج","Mise en scène",Clapperboard],["برنامج الحصص","Planning",CalendarDays],["التداريب","Répétitions",Sparkles],["الديكور والملابس","Décor & costumes",Lightbulb],["الصوت والإضاءة","Son & lumière",Music2],["التتبع والتقييم","Suivi & évaluation",CheckCircle2],["العرض النهائي","Spectacle final",Theater]
