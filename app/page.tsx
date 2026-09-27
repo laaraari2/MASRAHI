@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Bell, BookOpen, CalendarDays, CheckCircle2, ChevronLeft, Clapperboard, FileText, Home, Lightbulb, Menu, Music2, Plus, Settings, ShieldCheck, Sparkles, Theater, Users, X } from "lucide-react";
 
 const nav = [
-  ["الرئيسية","Accueil",Home],["مشاريعي","Mes projets",Theater],["النصوص","Textes",BookOpen],["الإعداد والتكييف","Adaptation",FileText],["الشخصيات والأدوار","Personnages & rôles",Users],["الإخراج","Mise en scène",Clapperboard],["برنامج الحصص","Planning",CalendarDays],["التداريب","Répétitions",Sparkles],["الديكور والملابس","Décor & costumes",Lightbulb],["الصوت والإضاءة","Son & lumière",Music2],["التتبع والتقييم","Suivi & évaluation",CheckCircle2],["العرض النهائي","Spectacle final",Theater]
+  ["لوحة الإدارة","Administration",ShieldCheck],["الرئيسية","Accueil",Home],["مشاريعي","Mes projets",Theater],["النصوص","Textes",BookOpen],["الإعداد والتكييف","Adaptation",FileText],["الشخصيات والأدوار","Personnages & rôles",Users],["الإخراج","Mise en scène",Clapperboard],["برنامج الحصص","Planning",CalendarDays],["التداريب","Répétitions",Sparkles],["الديكور والملابس","Décor & costumes",Lightbulb],["الصوت والإضاءة","Son & lumière",Music2],["التتبع والتقييم","Suivi & évaluation",CheckCircle2],["العرض النهائي","Spectacle final",Theater]
 ] as const;
 
 export default function HomePage(){
@@ -17,7 +17,7 @@ export default function HomePage(){
   return <main className="app">
     <aside className="sidebar">
       <div className="brand">🎭 مَسْرَحِي <small>MASRAHI · من النص إلى الخشبة</small></div>
-      <nav className="nav">{nav.map(([ar,frn,Icon],i)=><span key={ar}>{i===2||i===8||i===11?<span className="sep"/>:null}<Link className={i===0?"active":""} href={i===0?"/admin":i===1?"/":i===2?"/project":i===3?"/textes":i===4?"/adaptation":i===5?"/roles":i===7?"/planning":i===8?"/rehearsals":i===9?"/decor":i===10?"/sound":i===11?"/evaluation":i===12?"/final":"#"}><Icon size={16}/>&nbsp; {fr?frn:ar}</Link></span>)}</nav>
+      <nav className="nav">{nav.map(([ar,frn,Icon],i)=><span key={ar}>{i===3||i===9||i===12?<span className="sep"/>:null}<Link className={i===0?"active":""} href={i===0?"/admin":i===1?"/":i===2?"/project":i===3?"/textes":i===4?"/adaptation":i===5?"/roles":i===6?"/#":i===7?"/planning":i===8?"/rehearsals":i===9?"/decor":i===10?"/sound":i===11?"/evaluation":i===12?"/final":i===13?"/final":"#"}><Icon size={16}/>&nbsp; {fr?frn:ar}</Link></span>)}</nav>
       <div className="nav" style={{marginTop:14}}><a href="#"><Settings size={16}/>&nbsp; {fr?"Paramètres":"الإعدادات"}</a></div>
     </aside>
     <section className="main">
